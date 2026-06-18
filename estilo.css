@@ -1,0 +1,256 @@
+body{
+    margin: 0;
+    padding: 30px;
+    background: #e9ecef; /* Fondo de la pantalla */
+    font-family: Arial, sans-serif;
+}
+.pagina{
+    max-width: 1350px;
+    margin: auto;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.18);
+}
+header{
+    color: white;
+    background: black;
+    padding: 12px;
+    margin-bottom: 1px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+#encuesta {
+    width: 100%;
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    color: black;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 100px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.campo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input,
+select {
+    width: 200px;
+}
+footer{
+    background: black;
+    padding: 2px;
+    margin-bottom: 2px;
+    border-radius: 15px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+    text-align: justify;
+    color: white;
+}
+
+
+
+#titulo {
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 1px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+#tex{
+    text-align: center;
+      
+}
+p{
+    background-color: rgba(128, 128, 128, 0.081); 
+}
+#contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Espacio entre la imagen y el video */
+    margin: 40px 0;
+    flex-wrap: wrap; /* En pantallas pequeñas se acomodan uno debajo del otro */
+}
+#contenedor img{
+    width: 375px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+#videojhoany {
+    
+    width: 640px;
+    border: 5px solid #fff;
+    border-radius: 18px;
+    background: #000;
+    box-shadow:
+        0 0 20px rgba(0,0,0,.35),
+        0 12px 35px rgba(0,0,0,.45);
+    transition: all .3s ease;
+}
+#videojhoany:hover {
+    transform: scale(1.02);
+    box-shadow:
+        0 0 30px rgba(255,255,255,.2),
+        0 18px 45px rgba(0,0,0,.55);
+}
+
+button:hover{
+    transform: scale(1.03);
+}
+#resultadoOculto{
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+#titulohanz {
+    text-align: center;
+    color: white;
+    padding: 2px;
+    margin-bottom: 1px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+#videovicente {
+    display: block;
+    margin: 50px auto;
+    width: 85%;
+    max-width: 640px;
+    border: 5px solid #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #000;
+    box-shadow:
+        0 0 20px rgba(0,0,0,0.35),
+        0 12px 35px rgba(0,0,0,0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#videovicente:hover {
+    transform: scale(1.02);
+    box-shadow:
+        0 0 30px rgba(255,255,255,0.2),
+        0 18px 45px rgba(0,0,0,0.55);
+}
+#colperfil{
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+    text-align: justify;
+}
+/* Contenedor del video */
+#documental {
+    display: block;
+    margin: 50px auto;
+    width: 85%;
+    max-width: 900px;
+    border: 5px solid #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #000;
+    box-shadow:
+        0 0 20px rgba(0,0,0,0.35),
+        0 12px 35px rgba(0,0,0,0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+#documental:hover {
+    transform: scale(1.02);
+    box-shadow:
+        0 0 30px rgba(255,255,255,0.2),
+        0 18px 45px rgba(0,0,0,0.55);
+}
+#colcreditos{
+    background: black;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+    text-align: justify;
+}
+
+
+
+
+
+#archivoMasivo{
+    display: none;
+    width: 80%;
+    margin: 40px auto;
+}
+
+#archivoMasivo h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.persona{
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+.persona h2{
+    color: #0B5ED7;
+    margin-bottom: 10px;
+}
+
+.persona h3{
+    margin-top: 20px;
+}
+
+.persona p{
+    text-align: justify;
+    line-height: 1.6;
+}
+
+
+.formularioUltimasPalabras{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    max-width:500px;
+    margin:auto;
+}
+
+.formularioUltimasPalabras input,
+.formularioUltimasPalabras textarea{
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+.formularioUltimasPalabras textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.formularioUltimasPalabras button{
+    padding:12px;
+    cursor:pointer;
+}
+
+.tarjeta-palabra{
+    background:#1f1f1f;
+    color:white;
+    padding:20px;
+    margin:20px 0;
+    border-radius:10px;
+}

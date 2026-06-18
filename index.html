@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olvidados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="pagina-contenedor my-4 p-3 p-md-5">
+        <header class="bg-black text-white p-3 mb-4 rounded-3 shadow-sm">
+            <div class="container text-center">
+                <h1 class="m-0 cabecera-titulo" onclick="window.location.href='index.html'">Olvidados</h1>
+            </div>
+        </header>
+
+        <main>
+            <form id="encuesta" class="bg-white p-4 rounded-3 shadow-sm mb-4">
+                <h2 id="tituloCalculadora" class="text-center mb-4 fs-3">
+                    Calculadora de expectativa de vida y relación con la vejez
+                </h2>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Nombre:</label>
+                        <input type="text" id="nombre" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Edad:</label>
+                        <input type="number" id="edad" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Con qué género te identificas?</label>
+                        <select id="genero" class="form-select">
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                            <option value="nn">Prefiero no decirlo</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Con qué frecuencia consumes alcohol?</label>
+                        <select id="alcohol" class="form-select">
+                            <option value="0">Nunca consumo alcohol</option>
+                            <option value="1">Tomo solo en reuniones (1 a 2 veces al mes)</option>
+                            <option value="2">Tomo varias veces al mes o fines de semana</option>
+                            <option value="3">Consumo alcohol varias veces por semana o diario</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Cómo describirías tu alimentación actualmente?</label>
+                        <select id="alimentacion" class="form-select">
+                            <option value="0">Regularmente balanceada (frutas, verduras, proteína)</option>
+                            <option value="1">Intento comer bien, aunque a veces reemplazo comidas</option>
+                            <option value="2">Depende mucho del tiempo o del dinero disponible</option>
+                            <option value="3">Frecuentemente salto comidas o es muy desordenada</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Con qué frecuencia realizas actividad física?</label>
+                        <select id="ejercicio" class="form-select">
+                            <option value="0">Hago ejercicio varias veces por semana</option>
+                            <option value="1">Camino o realizo actividad física ocasionalmente</option>
+                            <option value="2">Paso la mayor parte del tiempo sentado(a)</option>
+                            <option value="3">Nunca realizo actividad física</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Cuántas horas duermes normalmente?</label>
+                        <select id="sueño" class="form-select">
+                            <option value="0">Entre 7 y 8 horas y descanso bien</option>
+                            <option value="1">Aproximadamente 6 horas</option>
+                            <option value="2">Cinco horas o menos la mayoría de los días</option>
+                            <option value="3">Horarios irregulares o siento que no descanso</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Fumas o consumes nicotina?</label>
+                        <select id="fumar" class="form-select">
+                            <option value="0">Nunca he fumado ni consumo nicotina</option>
+                            <option value="1">Consumo ocasionalmente en reuniones</option>
+                            <option value="2">Consumo nicotina varias veces por semana</option>
+                            <option value="3">Consumo diariamente o siento dependencia</option>
+                        </select>
+                    </div> 
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Te han diagnosticado alguna condición médica?</label>
+                        <select id="condicion" class="form-select">
+                            <option value="0">Ninguna condición médica</option>
+                            <option value="1">Presión alta, colesterol u otras leves</option>
+                            <option value="2">Diabetes u otra condición de control constante</option>
+                            <option value="3">Varias condiciones que afectan mi rutina diaria</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Sientes estrés o preocupación cotidiana?</label>
+                        <select id="estres" class="form-select">
+                            <option value="0">Rara vez siento estrés fuerte</option>
+                            <option value="1">Tengo momentos de estrés algunas veces por semana</option>
+                            <option value="2">Me siento estresado(a) frecuentemente</option>
+                            <option value="3">Vivo con estrés o preocupación constante</option>
+                        </select>
+                    </div>  
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Sientes cansancio físico o agotamiento?</label>
+                        <select id="cansancio" class="form-select">
+                            <option value="0">Casi nunca me siento agotado(a)</option>
+                            <option value="1">Algunas veces termino muy cansado(a)</option>
+                            <option value="2">Me siento agotado(a) varios días de la semana</option>
+                            <option value="3">Vivo en cansancio constante o sin energía</option>
+                        </select>
+                    </div>  
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Tienes dolores físicos o molestias?</label>
+                        <select id="dolor" class="form-select">
+                            <option value="0">No afectan mis actividades</option>
+                            <option value="1">Algunas molestias aparecen ocasionalmente</option>
+                            <option value="2">El dolor afecta varias actividades de mi rutina</option>
+                            <option value="3">Mi cuerpo limita constantemente lo que puedo hacer</option>
+                        </select>
+                    </div> 
+                    
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Te sientes triste, vacío(a) o desanimado(a)?</label>
+                        <select id="triste" class="form-select">
+                            <option value="0">Muy rara vez me siento así</option>
+                            <option value="1">Algunas veces durante el mes</option>
+                            <option value="2">Me siento así frecuentemente</option>
+                            <option value="3">Me siento así casi todos los días</option>
+                        </select>
+                    </div> 
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Te sientes escuchado y comprendido?</label>
+                        <select id="escuchado" class="form-select">
+                            <option value="0">Me siento escuchado(a) y comprendido(a)</option>
+                            <option value="1">A veces siento apoyo y otras veces no</option>
+                            <option value="2">Frecuentemente siento que no me entienden</option>
+                            <option value="3">Me siento ignorado(a) emocionalmente</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Ante un problema emocional, ¿qué haces?</label>
+                        <select id="problema" class="form-select">
+                            <option value="0">Busco apoyo en varias personas</option>
+                            <option value="1">Hablo con alguien cercano</option>
+                            <option value="2">Generalmente me guardo lo que siento</option>
+                            <option value="3">No tengo con quién hablar realmente</option>
+                        </select>
+                    </div> 
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Qué tan acompañado(a) te sientes actualmente?</label>
+                        <select id="acompañado" class="form-select">
+                            <option value="0">Me siento acompañado(a) la mayor parte del tiempo</option>
+                            <option value="1">A veces me siento acompañado(a) y otras no</option>
+                            <option value="2">Frecuentemente me siento solo(a)</option>
+                            <option value="3">Me siento completamente solo(a)</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Con cuántas personas hablas diariamente?</label>
+                        <select id="personas" class="form-select">
+                            <option value="0">Habló constantemente con varias personas</option>
+                            <option value="1">Hablo con algunas personas cercanas diariamente</option>
+                            <option value="2">Solo hablo con una persona o casi nadie</option>
+                            <option value="3">Paso días sin conversar realmente con alguien</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Compartes tiempo significativo con otros?</label>
+                        <select id="personas2" class="form-select">
+                            <option value="0">Comparto tiempo con otras personas frecuentemente</option>
+                            <option value="1">A veces comparto espacios importantes con alguien</option>
+                            <option value="2">Muy pocas veces tengo momentos significativos</option>
+                            <option value="3">Casi nunca comparto realmente con alguien</option>
+                        </select>
+                    </div> 
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Con qué frecuencia te sientes solo(a)?</label>
+                        <select id="solo" class="form-select">
+                            <option value="0">Casi nunca me siento solo(a)</option>
+                            <option value="1">A veces me siento solo(a)</option>
+                            <option value="2">Me siento solo(a) frecuentemente</option>
+                            <option value="3">Me siento solo(a) casi todo el tiempo</option>
+                        </select>
+                    </div> 
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Tienes alguien en quien realmente puedas confiar?</label>
+                        <select id="confiar" class="form-select">
+                            <option value="0">Tengo varias personas en quienes confiar</option>
+                            <option value="1">Tengo una persona cercana</option>
+                            <option value="2">No estoy completamente seguro(a)</option>
+                            <option value="3">Siento que no tengo a nadie</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Si desaparecieras, ¿quién lo notaría?</label>
+                        <select id="desaparecer" class="form-select">
+                            <option value="0">Muchas personas lo notarían rápidamente</option>
+                            <option value="1">Algunas personas probablemente lo notarían</option>
+                            <option value="2">Tal vez solo una persona lo notaría</option>
+                            <option value="3">Siento que probablemente nadie lo notaría</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Qué tan fácil es para ti pedir ayuda?</label>
+                        <select id="ayuda" class="form-select">
+                            <option value="0">Me resulta fácil pedir ayuda</option>
+                            <option value="1">A veces me cuesta, pero puedo hacerlo</option>
+                            <option value="2">Me cuesta mucho pedir ayuda</option>
+                            <option value="3">Prefiero no pedir ayuda nunca</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Sientes que cargas más de lo que soportas?</label>
+                        <select id="carga" class="form-select">
+                            <option value="0">Rara vez siento sobrecarga</option>
+                            <option value="1">A veces siento cansancio por responsabilidades</option>
+                            <option value="2">Frecuentemente siento que no puedo con todo</option>
+                            <option value="3">Constantemente me siento sobrepasado(a)</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Cómo describirías tu situación económica?</label>
+                        <select id="economia" class="form-select">
+                            <option value="0">Puedo cubrir mi vida sin gran preocupación</option>
+                            <option value="1">A veces tengo dificultades económicas</option>
+                            <option value="2">Frecuentemente siento inestabilidad económica</option>
+                            <option value="3">Vivo con preocupación constante por dinero</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Tienes tiempo para descansar realmente?</label>
+                        <select id="descansar" class="form-select">
+                            <option value="0">Generalmente logro descansar</option>
+                            <option value="1">Algunas veces siento que no descanso suficiente</option>
+                            <option value="2">Frecuentemente no tengo tiempo para descansar</option>
+                            <option value="3">Siento agotamiento constante sin descanso real</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Piensas en tu vejez o futuro?</label>
+                        <select id="vejez" class="form-select">
+                            <option value="1">Pienso en ello frecuentemente</option>
+                            <option value="2">A veces pienso en eso</option>
+                            <option value="3">Muy pocas veces lo pienso</option>
+                            <option value="4">Nunca pienso en mi vejez</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Quién podría cuidarte cuando seas mayor?</label>
+                        <select id="mayor" class="form-select">
+                            <option value="1">Mi familia</option>
+                            <option value="2">Mi pareja o amistades cercanas</option>
+                            <option value="3">Una institución o apoyo externo</option>
+                            <option value="4">No lo sé o siento que nadie lo hará</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Interactúas con adultos mayores?</label>
+                        <select id="interactuar" class="form-select">
+                            <option value="1">Frecuentemente convivo con adultos mayores</option>
+                            <option value="2">Algunas veces interactúo con ellos</option>
+                            <option value="3">Casi nunca tengo contacto con ellos</option>
+                            <option value="4">Nunca interactúo con adultos mayores</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Crees que los ancianos reciben buen cuidado?</label>
+                        <select id="adultos" class="form-select">
+                            <option value="1">Sí, la mayoría sí recibe cuidado</option>
+                            <option value="2">Algunos reciben apoyo, otros no</option>
+                            <option value="3">La mayoría no recibe suficiente cuidado</option>
+                            <option value="4">No, muchos viven en abandono o soledad</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">¿Cómo imaginas tu vida de anciano(a)?</label>
+                        <select id="imaginar" class="form-select">
+                            <option value="1">Rodeado(a) de personas importantes y apoyo</option>
+                            <option value="2">Estable, aunque con algunas incertidumbres</option>
+                            <option value="3">Nunca pienso realmente en eso</option>
+                            <option value="4">Me preocupa o me cuesta imaginarlo</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Al pensar en el futuro, ¿cómo te sientes?</label>
+                        <select id="futuro" class="form-select">
+                            <option value="1">Esperanzado(a) y tranquilo(a)</option>
+                            <option value="2">Inseguro(a) algunas veces</option>
+                            <option value="3">Frecuentemente preocupado(a)</option>
+                            <option value="4">Vacío(a), angustiado(a) o desconectado(a)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="button" class="btn btn-dark btn-lg px-5 shadow-sm" onclick="calcularTodo()">
+                        Calcular
+                    </button>
+                </div>
+            </form>
+
+            <div class="text-center my-3">
+                <h3 id="resultado" class="fs-4 text-dark"></h3>
+                <h3 id="resultado1" class="fs-4 fw-bold"></h3>
+                <button id="botonNuevo" class="btn mt-2 shadow" style="display:none;" onclick="redirigir()">Conocer perfil completo</button>
+            </div>
+
+            <div id="resultadoOculto" class="mt-5 p-4 bg-white rounded-3 shadow-sm">
+                <h2 class="text-center mb-4">Perfiles de Relación con la Vejez</h2>
+                <div class="row g-4">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card h-100 border-success shadow-sm">
+                            <div class="card-body d-flex flex-column justify-content-between text-center">
+                                <h5 class="card-title text-success">🟢 Perfil 1</h5>
+                                <p class="card-text small fw-semibold">Red de apoyo en construcción<br>(6 a 9 Puntos)<br>Ref: Johany</p>
+                                <button type="button" class="btn btn-sm btn-outline-success w-100 mt-2" onclick="window.location.href='perfil1.html'">Conoce más</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card h-100 border-warning shadow-sm">
+                            <div class="card-body d-flex flex-column justify-content-between text-center">
+                                <h5 class="card-title text-warning">🟡 Perfil 2</h5>
+                                <p class="card-text small fw-semibold">Inestabilidad silenciosa<br>(10 a 14 Puntos)<br>Ref: vicente</p>
+                                <button type="button" class="btn btn-sm btn-outline-warning w-100 mt-2" onclick="window.location.href='perfil2.html'">Conoce más</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card h-100 border-danger shadow-sm">
+                            <div class="card-body d-flex flex-column justify-content-between text-center">
+                                <h5 class="card-title text-danger">🔴 Perfil 3</h5>
+                                <p class="card-text small fw-semibold">Riesgo de desconexión<br>(15 a 19 puntos)<br>Ref: Luz Dary</p>
+                                <button type="button" class="btn btn-sm btn-outline-danger w-100 mt-2" onclick="window.location.href='perfil3.html'">Conoce más</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="card h-100 border-dark shadow-sm">
+                            <div class="card-body d-flex flex-column justify-content-between text-center">
+                                <h5 class="card-title text-dark">⚫ Perfil 4</h5>
+                                <p class="card-text small fw-semibold">Desvinculación profunda<br>(20 a 24 Puntos)<br>Ref: Hanz</p>
+                                <button type="button" class="btn btn-sm btn-outline-dark w-100 mt-2" onclick="window.location.href='perfil4.html'">Conoce más</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-black text-white p-4 mt-5 rounded-3 shadow-sm">
+            <h3 class="text-center mb-4 border-bottom border-secondary pb-2">Créditos</h3>
+            <div class="row g-3 fs-6">
+                <div class="col-md-6">
+                    <p class="fw-bold mb-1 m-0 bg-transparent text-white">Creador: Carlos Castro</p>
+                    <p class="text-muted small mb-2 m-0 bg-transparent text-white">Estudiantes de Comunicación Social y Periodismo:</p>
+                    <ul class="list-unstyled ps-2 text-secondary">
+                        <li>• Valentina Cabrera Cuchalá.</li>
+                        <li>• Sofia Villanueva Garzón.</li>
+                        <li>• Sara Valeria Díaz Domínguez.</li>
+                        <li>• Laura Cecilia Castro Martínez.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="m-0 bg-transparent text-white fw-semibold">Médico asesor: Santiago Bastidas.</p>
+                    <p class="text-secondary small mt-2 m-0 bg-transparent">Agradecimientos especiales al centro de reposo <em>Mentes saludables</em> por abrirnos sus puertas.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
